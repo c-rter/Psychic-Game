@@ -25,8 +25,6 @@ document.onkeydown = function(event) {
     
     else {
         guess--;
-        document.getElementById("guess").innerHTML = guess;
-
     
     if (guess == 0) {
         loss++;
@@ -37,5 +35,7 @@ document.onkeydown = function(event) {
        }
     
     }
+    
+    document.getElementById("guess").innerHTML = guess;
     document.getElementById("history").innerHTML = inputHistory;
 }
