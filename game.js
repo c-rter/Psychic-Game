@@ -15,11 +15,13 @@ document.onkeydown = function(event) {
         computerLetter = alphabet[Math.floor(Math.random() * 26)];
         inputHistory = "";
         guess = 10;
+        document.getElementById("win").innerHTML = win;
+
     }
     
     else {
         guess--;
-        test = 20;
+        document.getElementById("guess").innerHTML = guess;
 
     
     if (guess == 0) {
@@ -27,12 +29,9 @@ document.onkeydown = function(event) {
         computerLetter = alphabet[Math.floor(Math.random() * 26)];
         inputHistory = "";
         guess = 10;
+        document.getElementById("loss").innerHTML = loss;
        }
     
     }
-    document.getElementById("win").innerHTML = win;
-    document.getElementById("loss").innerHTML = loss;
-    document.getElementById("guess").innerHTML = guess;
     document.getElementById("history").innerHTML = inputHistory;
-
 }
