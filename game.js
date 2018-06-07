@@ -6,6 +6,10 @@ alphabet = 'abdefghijklmnopqrstuvwxyz'.split('');
 
 var computerLetter = alphabet[Math.floor(Math.random() * 26)];
 
+document.getElementById("win").innerHTML = win;
+document.getElementById("guess").innerHTML = guess;
+document.getElementById("loss").innerHTML = loss;
+
 document.onkeydown = function(event) {
     
     inputHistory = inputHistory + event.key;
